@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Card, Tag, Rate, Row, Col, Typography, Avatar, Statistic } from 'antd';
+import { Button, Card, Tag, Rate, Row, Col, Typography, Statistic } from 'antd';
 import { 
     BookOutlined, 
     SafetyCertificateOutlined, 
     GlobalOutlined, 
     ClockCircleOutlined, 
     TeamOutlined, 
-    LineChartOutlined, 
     UserOutlined, 
     TrophyOutlined,
     PlayCircleOutlined,
@@ -144,22 +143,22 @@ const LandingPage = () => {
     return (
         <div className="min-h-screen bg-cream-100 dark:bg-charcoal-500 transition-colors duration-300">
             {/* Header */}
-            <header className="sticky top-0 z-50 bg-white/80 dark:bg-warm-900/80 backdrop-blur-xl border-b border-warm-200 dark:border-warm-700">
+            <header className="sticky top-0 z-50 bg-white/90 dark:bg-warm-900/90 backdrop-blur-xl border-b border-warm-200 dark:border-warm-700">
                 <div className="max-w-7xl mx-auto px-6 py-4">
                     <div className="flex items-center justify-between">
                         <Logo size="large" showText={true} />
                         
                         <nav className="hidden md:flex items-center space-x-8">
-                            <Link to="/courses" className="text-warm-600 dark:text-warm-300 hover:text-terracotta-500 transition-colors">
+                            <Link to="/courses" className="text-warm-600 dark:text-warm-300 hover:text-terracotta-500 transition-colors font-medium">
                                 Courses
                             </Link>
-                            <Link to="/about" className="text-warm-600 dark:text-warm-300 hover:text-terracotta-500 transition-colors">
+                            <Link to="/about" className="text-warm-600 dark:text-warm-300 hover:text-terracotta-500 transition-colors font-medium">
                                 About
                             </Link>
-                            <Link to="/pricing" className="text-warm-600 dark:text-warm-300 hover:text-terracotta-500 transition-colors">
+                            <Link to="/pricing" className="text-warm-600 dark:text-warm-300 hover:text-terracotta-500 transition-colors font-medium">
                                 Pricing
                             </Link>
-                            <Link to="/contact" className="text-warm-600 dark:text-warm-300 hover:text-terracotta-500 transition-colors">
+                            <Link to="/contact" className="text-warm-600 dark:text-warm-300 hover:text-terracotta-500 transition-colors font-medium">
                                 Contact
                             </Link>
                         </nav>
@@ -168,19 +167,19 @@ const LandingPage = () => {
                             <ThemeToggle inline={true} />
                             {user ? (
                                 <Link to="/dashboard">
-                                    <Button type="primary" className="bg-terracotta-500 hover:bg-terracotta-600 border-terracotta-500">
+                                    <Button type="primary" className="bg-terracotta-500 hover:bg-terracotta-600 border-terracotta-500 font-medium">
                                         Dashboard
                                     </Button>
                                 </Link>
                             ) : (
                                 <div className="flex items-center space-x-3">
                                     <Link to="/login">
-                                        <Button className="text-terracotta-500 border-terracotta-500 hover:bg-terracotta-50 dark:hover:bg-terracotta-900">
+                                        <Button className="text-terracotta-500 border-terracotta-500 hover:bg-terracotta-50 dark:hover:bg-terracotta-900 font-medium">
                                             Sign In
                                         </Button>
                                     </Link>
                                     <Link to="/register">
-                                        <Button type="primary" className="bg-terracotta-500 hover:bg-terracotta-600 border-terracotta-500">
+                                        <Button type="primary" className="bg-terracotta-500 hover:bg-terracotta-600 border-terracotta-500 font-medium">
                                             Get Started
                                         </Button>
                                     </Link>
@@ -193,8 +192,8 @@ const LandingPage = () => {
 
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-gradient-to-br from-terracotta-50 via-cream-50 to-sage-50 dark:from-charcoal-600 dark:via-warm-800 dark:to-sage-900">
-                {/* Background Elements */}
-                <div className="absolute inset-0">
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0 overflow-hidden">
                     <div className="absolute top-20 left-10 w-72 h-72 bg-terracotta-200 dark:bg-terracotta-800 rounded-full mix-blend-multiply dark:mix-blend-overlay filter blur-xl opacity-70 animate-blob"></div>
                     <div className="absolute top-40 right-10 w-72 h-72 bg-sage-200 dark:bg-sage-800 rounded-full mix-blend-multiply dark:mix-blend-overlay filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
                     <div className="absolute -bottom-8 left-20 w-72 h-72 bg-mustard-200 dark:bg-mustard-800 rounded-full mix-blend-multiply dark:mix-blend-overlay filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
@@ -202,7 +201,7 @@ const LandingPage = () => {
 
                 <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-32">
                     <div className="text-center space-y-8">
-                        <div className="space-y-4">
+                        <div className="space-y-6">
                             <div className="inline-flex items-center px-4 py-2 bg-terracotta-100 dark:bg-terracotta-900 rounded-full text-terracotta-700 dark:text-terracotta-300 text-sm font-medium">
                                 <FireOutlined className="mr-2" />
                                 Join 500,000+ learners worldwide
@@ -227,7 +226,7 @@ const LandingPage = () => {
                                     type="primary" 
                                     size="large" 
                                     icon={<RocketOutlined />}
-                                    className="h-14 px-8 text-lg font-semibold bg-terracotta-500 hover:bg-terracotta-600 border-terracotta-500 shadow-lg hover:shadow-xl transition-all duration-300"
+                                    className="h-14 px-8 text-lg font-semibold bg-terracotta-500 hover:bg-terracotta-600 border-terracotta-500 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                                 >
                                     Start Learning Today
                                 </Button>
@@ -267,12 +266,12 @@ const LandingPage = () => {
                     <Row gutter={[32, 32]}>
                         {stats.map((stat, index) => (
                             <Col key={index} xs={24} sm={12} lg={6}>
-                                <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-cream-50 to-white dark:from-warm-800 dark:to-warm-900">
+                                <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-cream-50 to-white dark:from-warm-800 dark:to-warm-900">
                                     <div className="text-4xl text-terracotta-500 mb-4">
                                         {stat.icon}
                                     </div>
                                     <Statistic
-                                        title={<span className="text-warm-600 dark:text-warm-300">{stat.title}</span>}
+                                        title={<span className="text-warm-600 dark:text-warm-300 font-medium">{stat.title}</span>}
                                         value={stat.value}
                                         valueStyle={{ 
                                             color: '#E76F51', 
@@ -303,7 +302,7 @@ const LandingPage = () => {
                         {featuredCourses.map((course) => (
                             <Col key={course.id} xs={24} lg={8}>
                                 <Card 
-                                    className="h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white dark:bg-warm-900"
+                                    className="h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white dark:bg-warm-900 overflow-hidden"
                                     cover={
                                         <div className="relative p-8 bg-gradient-to-br from-terracotta-100 to-sage-100 dark:from-terracotta-900 dark:to-sage-900">
                                             {course.bestseller && (
@@ -382,7 +381,7 @@ const LandingPage = () => {
                                             <Link to={`/courses/${course.id}`}>
                                                 <Button 
                                                     type="primary" 
-                                                    className="bg-terracotta-500 hover:bg-terracotta-600 border-terracotta-500"
+                                                    className="bg-terracotta-500 hover:bg-terracotta-600 border-terracotta-500 font-medium"
                                                 >
                                                     Enroll Now
                                                 </Button>
@@ -399,7 +398,7 @@ const LandingPage = () => {
                             <Button 
                                 size="large" 
                                 icon={<ArrowRightOutlined />}
-                                className="h-12 px-8 text-sage-600 dark:text-sage-400 border-sage-500 hover:bg-sage-50 dark:hover:bg-sage-900"
+                                className="h-12 px-8 text-sage-600 dark:text-sage-400 border-sage-500 hover:bg-sage-50 dark:hover:bg-sage-900 font-medium"
                             >
                                 View All Courses
                             </Button>
@@ -423,7 +422,7 @@ const LandingPage = () => {
                     <Row gutter={[32, 32]}>
                         {features.map((feature, index) => (
                             <Col key={index} xs={24} sm={12} lg={6}>
-                                <Card className={`text-center border-0 h-full ${feature.color} hover:shadow-lg transition-all duration-300`}>
+                                <Card className={`text-center border-0 h-full ${feature.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
                                     <div className="p-6 space-y-4">
                                         <div className="flex justify-center">
                                             {feature.icon}
@@ -457,7 +456,7 @@ const LandingPage = () => {
                     <Row gutter={[32, 32]}>
                         {testimonials.map((testimonial, index) => (
                             <Col key={index} xs={24} lg={8}>
-                                <Card className="h-full border-0 shadow-lg bg-white dark:bg-warm-900">
+                                <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-warm-900">
                                     <div className="p-6 space-y-4">
                                         <Rate disabled value={testimonial.rating} className="text-saffron-500" />
                                         <Paragraph className="text-warm-600 dark:text-warm-300 text-lg italic">
@@ -501,7 +500,7 @@ const LandingPage = () => {
                                     type="primary" 
                                     size="large" 
                                     icon={<RocketOutlined />}
-                                    className="h-14 px-8 text-lg font-semibold bg-white text-terracotta-500 border-white hover:bg-cream-100 hover:border-cream-100"
+                                    className="h-14 px-8 text-lg font-semibold bg-white text-terracotta-500 border-white hover:bg-cream-100 hover:border-cream-100 shadow-lg hover:shadow-xl transition-all duration-300"
                                 >
                                     Get Started Free
                                 </Button>
@@ -510,7 +509,7 @@ const LandingPage = () => {
                                 <Button 
                                     size="large" 
                                     icon={<TeamOutlined />}
-                                    className="h-14 px-8 text-lg font-semibold text-white border-white hover:bg-white/10"
+                                    className="h-14 px-8 text-lg font-semibold text-white border-white hover:bg-white/10 transition-all duration-300"
                                 >
                                     Become a Trainer
                                 </Button>
@@ -546,16 +545,16 @@ const LandingPage = () => {
                                     Empowering learners worldwide with high-quality, accessible education from industry experts.
                                 </Paragraph>
                                 <div className="flex space-x-4">
-                                    <Button type="text" className="text-warm-300 hover:text-white p-2">
+                                    <Button type="text" className="text-warm-300 hover:text-white p-2 text-lg">
                                         📘
                                     </Button>
-                                    <Button type="text" className="text-warm-300 hover:text-white p-2">
+                                    <Button type="text" className="text-warm-300 hover:text-white p-2 text-lg">
                                         🐦
                                     </Button>
-                                    <Button type="text" className="text-warm-300 hover:text-white p-2">
+                                    <Button type="text" className="text-warm-300 hover:text-white p-2 text-lg">
                                         💼
                                     </Button>
-                                    <Button type="text" className="text-warm-300 hover:text-white p-2">
+                                    <Button type="text" className="text-warm-300 hover:text-white p-2 text-lg">
                                         📸
                                     </Button>
                                 </div>
