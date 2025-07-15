@@ -1,0 +1,360 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clean, simple animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Simple animation classes */
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Clean delay classes */
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+/* Essential utilities */
+.backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+}
+
+.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.text-transparent {
+    color: transparent;
+}
+
+/* Clean base styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode text fixes */
+.dark .text-charcoal-500 {
+    color: #F1EFED !important;
+}
+
+.dark .text-warm-500 {
+    color: #CFCAC5 !important;
+}
+
+.dark .text-warm-300 {
+    color: #E0DDD9 !important;
+}
+
+.dark .text-cream-100 {
+    color: #FFF5E1 !important;
+}
+
+/* Simple button styles */
+.btn-hero {
+    background: linear-gradient(135deg, #E76F51 0%, #F4A261 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 111, 81, 0.3);
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(231, 111, 81, 0.4);
+}
+
+.btn-secondary-enhanced {
+    background: transparent;
+    color: #E76F51;
+    border: 2px solid #E76F51;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-enhanced:hover {
+    background: #E76F51;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Simple card styles */
+.card-feature-enhanced {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-feature-enhanced:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dark .card-feature-enhanced {
+    background: #3D3735;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.interactive-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.interactive-card:hover {
+    transform: translateY(-4px);
+}
+
+.glass-premium {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+}
+
+.dark .glass-premium {
+    background: rgba(46, 46, 46, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Text gradient */
+.text-gradient-primary {
+    background: linear-gradient(135deg, #E76F51 0%, #F4A261 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-animated {
+    background: linear-gradient(135deg, #E76F51 0%, #F4A261 50%, #2A9D8F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Ant Design overrides - Fix button styling */
+.ant-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+    height: auto !important;
+    padding: 8px 16px !important;
+    line-height: 1.5 !important;
+}
+
+.ant-btn-primary {
+    background: #E76F51 !important;
+    border-color: #E76F51 !important;
+    color: white !important;
+}
+
+.ant-btn-primary:hover {
+    background: #D85D41 !important;
+    border-color: #D85D41 !important;
+    color: white !important;
+}
+
+.ant-btn-primary:focus {
+    background: #D85D41 !important;
+    border-color: #D85D41 !important;
+    color: white !important;
+}
+
+.ant-btn-primary:active {
+    background: #B64A31 !important;
+    border-color: #B64A31 !important;
+    color: white !important;
+}
+
+.ant-btn-default {
+    background: white !important;
+    border-color: #d9d9d9 !important;
+    color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.ant-btn-default:hover {
+    color: #E76F51 !important;
+    border-color: #E76F51 !important;
+}
+
+.ant-btn-lg {
+    padding: 12px 24px !important;
+    font-size: 16px !important;
+}
+
+.ant-card {
+    border-radius: 16px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #f0f0f0 !important;
+}
+
+.ant-progress-bg {
+    background: linear-gradient(90deg, #E76F51, #2A9D8F) !important;
+}
+
+.ant-rate-star {
+    color: #faad14 !important;
+}
+
+.ant-tag {
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    padding: 2px 8px !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E76F51;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #2E2E2E;
+}
+
+/* Focus and selection */
+*:focus-visible {
+    outline: 2px solid #E76F51;
+    outline-offset: 2px;
+}
+
+::selection {
+    background: #E76F51;
+    color: white;
+}
+
+/* Essential spacing utilities */
+.space-y-10>*+* {
+    margin-top: 2.5rem;
+}
+
+.space-y-8>*+* {
+    margin-top: 2rem;
+}
+
+.space-y-6>*+* {
+    margin-top: 1.5rem;
+}
+
+.space-y-4>*+* {
+    margin-top: 1rem;
+}
+
+.space-x-4>*+* {
+    margin-left: 1rem;
+}
+
+.space-x-6>*+* {
+    margin-left: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .space-y-10>*+* {
+        margin-top: 1.5rem;
+    }
+
+    .card-feature-enhanced:hover {
+        transform: translateY(-2px);
+    }
+
+    .btn-hero:hover {
+        transform: translateY(-1px);
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
